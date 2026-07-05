@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأدوات — ShadowTrade Academy</title>
+<meta name="description" content="حاسبة حجم اللوت، حاسبة المخاطرة، ودفتر تداول مجاني — أدوات ShadowTrade لاتخاذ قرارات تداول أدق.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4995162342861334" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">ST</span>
+      <span class="brand-name">Shadow<strong>Trade</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">الرئيسية</a>
+      <a href="getting-started.html">دليل البداية</a>
+      <a href="academy.html">الأكاديمية</a>
+      <a href="articles.html">المقالات</a>
+      <a href="analysis.html">التحليلات</a>
+      <a href="psychology.html">علم النفس</a>
+      <a href="tools.html" class="active">الأدوات</a>
+      <a href="traders.html">كبار المتداولين</a>
+      <a href="contact.html">تواصل</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="academy-head">
+  <div class="wrap">
+    <p class="eyebrow">SHADOWTRADE ACADEMY</p>
+    <h1>الأدوات المجانية</h1>
+    <p class="hero-sub">حاسبات فعلية تساعدك تتخذ قرارك بدقة، بدون تسجيل وبدون أي مقابل.</p>
+  </div>
+</section>
+
+<!-- ===== Lot size calculator ===== -->
+<section class="section">
+  <div class="wrap">
+    <p class="section-label">أداة 1</p>
+    <h2 class="section-title">حاسبة حجم اللوت</h2>
+
+    <div class="calc-box">
+      <div class="calc-form">
+        <label>رأس المال ($)
+          <input type="number" id="lotBalance" placeholder="1000">
+        </label>
+        <label>نسبة المخاطرة (%)
+          <input type="number" id="lotRisk" placeholder="1">
+        </label>
+        <label>وقف الخسارة (نقطة)
+          <input type="number" id="lotSL" placeholder="20">
+        </label>
+        <label>قيمة النقطة لكل لوت قياسي ($)
+          <input type="number" id="lotPipValue" placeholder="10">
+        </label>
+        <button class="btn btn-primary" id="calcLotBtn">احسب حجم اللوت</button>
+      </div>
+      <div class="calc-result" id="lotResult">
+        <span class="result-label">حجم اللوت المناسب</span>
+        <span class="result-value" id="lotResultValue">—</span>
+        <span class="result-sub" id="lotResultSub">أدخل بياناتك واضغط احسب</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Risk calculator ===== -->
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="section-label">أداة 2</p>
+    <h2 class="section-title">حاسبة المخاطرة</h2>
+
+    <div class="calc-box">
+      <div class="calc-form">
+        <label>رأس المال ($)
+          <input type="number" id="riskBalance" placeholder="1000">
+        </label>
+        <label>حجم اللوت المستخدم
+          <input type="number" id="riskLot" placeholder="0.1" step="0.01">
+        </label>
+        <label>وقف الخسارة (نقطة)
+          <input type="number" id="riskSL" placeholder="20">
+        </label>
+        <label>قيمة النقطة لكل لوت قياسي ($)
+          <input type="number" id="riskPipValue" placeholder="10">
+        </label>
+        <button class="btn btn-primary" id="calcRiskBtn">احسب المخاطرة</button>
+      </div>
+      <div class="calc-result" id="riskResult">
+        <span class="result-label">المبلغ المخاطر به</span>
+        <span class="result-value" id="riskResultValue">—</span>
+        <span class="result-sub" id="riskResultSub">أدخل بياناتك واضغط احسب</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trading journal ===== -->
+<section class="section">
+  <div class="wrap">
+    <p class="section-label">أداة 3</p>
+    <h2 class="section-title">Trading Journal — دفتر تداولاتك</h2>
+    <p class="hero-sub">مسجّل محليًا في متصفحك فقط. سجّل صفقاتك لتراجع قراراتك بصدق مع نفسك.</p>
+
+    <form class="journal-form" id="journalForm">
+      <input type="date" id="jDate" required>
+      <input type="text" id="jPair" placeholder="الزوج (مثال: XAUUSD)" required>
+      <select id="jDirection">
+        <option value="buy">شراء</option>
+        <option value="sell">بيع</option>
+      </select>
+      <input type="number" id="jResult" placeholder="النتيجة ($)" step="0.01" required>
+      <input type="text" id="jNotes" placeholder="ملاحظات (اختياري)">
+      <button type="submit" class="btn btn-primary btn-small">إضافة</button>
+    </form>
+
+    <div class="journal-table-wrap">
+      <table class="journal-table" id="journalTable">
+        <thead>
+          <tr><th>التاريخ</th><th>الزوج</th><th>الاتجاه</th><th>النتيجة</th><th>ملاحظات</th><th></th></tr>
+        </thead>
+        <tbody id="journalBody"></tbody>
+      </table>
+      <p class="journal-empty" id="journalEmpty">لا توجد صفقات مسجلة بعد.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">ST</span>
+      <span class="brand-name">Shadow<strong>Trade</strong></span>
+      <p>أكاديمية عربية لتعلم التداول بجدية ومسؤولية.</p>
+    </div>
+    <div class="footer-col">
+      <h5>الموقع</h5>
+      <a href="academy.html">الأكاديمية</a>
+      <a href="articles.html">المقالات</a>
+      <a href="analysis.html">التحليلات</a>
+      <a href="psychology.html">علم النفس</a>
+    </div>
+    <div class="footer-col">
+      <h5>تواصل</h5>
+      <a href="https://whatsapp.com/channel/0029Vb8HulV3rZZjToSmQK2K" target="_blank" rel="noopener">واتساب</a>
+      <a href="https://t.me/+Hec2GglMw-1kN2Fk" target="_blank" rel="noopener">تيليجرام</a>
+      <a href="contact.html">نموذج تواصل</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 ShadowTrade. جميع الحقوق محفوظة. · <a href="privacy-policy.html">سياسة الخصوصية</a></p>
+</footer>
+
+<script src="script.js"></script>
+<script src="tools.js"></script>
+</body>
+</html>

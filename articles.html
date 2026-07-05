@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الأكاديمية — ShadowTrade Academy</title>
-<meta name="description" content="محاضرات ShadowTrade الأكاديمية كاملة داخل الموقع، مرتبة من التمهيدية للمحاضرة التاسعة.">
+<title>المقالات — ShadowTrade Academy</title>
+<meta name="description" content="مقالات ShadowTrade في التداول والتحليل، تُضاف بشكل مستمر.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,7 +13,6 @@
 </head>
 <body>
 
-<!-- ===== Header ===== -->
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="index.html" class="brand">
@@ -23,8 +22,8 @@
     <nav class="main-nav" id="mainNav">
       <a href="index.html">الرئيسية</a>
       <a href="getting-started.html">دليل البداية</a>
-      <a href="academy.html" class="active">الأكاديمية</a>
-      <a href="articles.html">المقالات</a>
+      <a href="academy.html">الأكاديمية</a>
+      <a href="articles.html" class="active">المقالات</a>
       <a href="analysis.html">التحليلات</a>
       <a href="psychology.html">علم النفس</a>
       <a href="tools.html">الأدوات</a>
@@ -37,66 +36,38 @@
   </div>
 </header>
 
-<!-- ===== Academy header ===== -->
 <section class="academy-head">
   <div class="wrap">
     <p class="eyebrow">SHADOWTRADE ACADEMY</p>
-    <h1>محاضرات الأكاديمية</h1>
-    <p class="hero-sub">شاهد المحاضرات بالترتيب من داخل الموقع مباشرة. باقي المحاضرات تُضاف تدريجيًا خلال الأسابيع القادمة.</p>
-
-    <div class="progress-wrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <span class="progress-text" id="progressText">0 من 11 مكتملة</span>
-    </div>
-
-    <div class="live-note">
-      <span class="live-dot"></span>
-      <p>
-        الكورسات تُبث مباشرة (Live) على تطبيق <strong>Zoom</strong>، والمحاضرات هنا هي تسجيلات لهذه الجلسات.
-        لو عايز تحضر الجلسة اللايف الجاية، تواصل مع الدعم على
-        <a href="https://wa.me/201131097657" target="_blank" rel="noopener">واتساب</a>.
-      </p>
-    </div>
+    <h1>المقالات</h1>
+    <p class="hero-sub">مقالات تراكمية حول السوق والاستراتيجيات، تُضاف بشكل مستمر — مقال أو اثنين كل يوم.</p>
   </div>
 </section>
 
-<!-- ===== Academy body ===== -->
-<section class="academy-body">
-  <div class="wrap academy-grid">
-
-    <!-- Player -->
-    <div class="player-col">
-      <div class="player-frame">
-        <iframe id="lecturePlayer"
-          src=""
-          title="مشغل محاضرات ShadowTrade"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="player-info">
-        <h2 id="currentTitle">المحاضرة التمهيدية</h2>
-        <button class="btn btn-ghost btn-small" id="markWatched">وضع علامة "تمت المشاهدة"</button>
-      </div>
-    </div>
-
-    <!-- Lecture list -->
-    <aside class="lecture-list" id="lectureList"></aside>
-
-  </div>
-</section>
-
-<!-- ===== Coming soon note ===== -->
-<section class="section section-alt">
+<section class="section">
   <div class="wrap">
-    <p class="section-label">قريبًا</p>
-    <h2 class="section-title">محاضرات جديدة تُضاف خلال أسبوعين</h2>
-    <p class="hero-sub">هذه أول 9 محاضرات، وسيتم إضافة الباقي بشكل مستمر — سجل الرابط في المفضلة وتابع من هنا.</p>
+    <div class="grid-cards">
+
+      <article class="card" style="cursor:default;">
+        <span class="card-icon">📰</span>
+        <h3>الفرق بين السكالبينج والسوينج تريدنج</h3>
+        <p>
+          السكالبينج يعتمد على صفقات قصيرة جدًا (دقائق) وعدد كبير منها يوميًا، وهو يحتاج تركيزًا عاليًا وسرعة قرار.
+          السوينج تريدنج يعتمد على صفقات تمتد لأيام أو أسابيع، ويحتاج صبرًا أكبر وتحمّلًا لتقلبات السعر أثناء الصفقة.
+          لا يوجد أسلوب "أفضل" بشكل مطلق — الاختيار يعتمد على وقتك المتاح وشخصيتك في التعامل مع الضغط.
+        </p>
+      </article>
+
+      <div class="card" style="cursor:default; opacity:0.6;">
+        <span class="card-icon">🕐</span>
+        <h3>قريبًا</h3>
+        <p>مقالات جديدة تُضاف باستمرار — تابع قناة تيليجرام لأول إشعار.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
@@ -122,6 +93,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="academy.js"></script>
 </body>
 </html>

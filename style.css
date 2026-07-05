@@ -398,6 +398,99 @@ img{max-width:100%;display:block;}
   100%{opacity:0; visibility:hidden; pointer-events:none;}
 }
 
+/* ============ Calculators (tools page) ============ */
+.calc-box{
+  display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;
+}
+.calc-form{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:24px; display:flex; flex-direction:column; gap:16px;
+}
+.calc-form label{
+  display:flex; flex-direction:column; gap:6px;
+  font-size:13.5px; color:var(--text-muted);
+}
+.calc-form input, .calc-form select{
+  background:var(--bg); border:1px solid var(--border); border-radius:8px;
+  padding:11px 14px; color:var(--text); font-family:var(--font-arabic); font-size:14.5px;
+}
+.calc-form input:focus, .calc-form select:focus{outline:none; border-color:var(--amber);}
+.calc-form .btn{margin-top:6px;}
+
+.calc-result{
+  background:var(--surface-alt); border:1px solid var(--border); border-radius:var(--radius);
+  padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; gap:8px;
+}
+.result-label{font-family:var(--font-mono); font-size:12px; color:var(--text-muted); letter-spacing:1px;}
+.result-value{font-family:var(--font-mono); font-size:34px; font-weight:700; color:var(--amber);}
+.result-sub{font-size:13px; color:var(--text-muted);}
+
+/* ============ Trading journal ============ */
+.journal-form{
+  display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1.4fr auto; gap:10px;
+  margin-bottom:24px;
+}
+.journal-form input, .journal-form select{
+  background:var(--surface); border:1px solid var(--border); border-radius:8px;
+  padding:10px 12px; color:var(--text); font-family:var(--font-arabic); font-size:13.5px;
+}
+.journal-form input:focus, .journal-form select:focus{outline:none; border-color:var(--amber);}
+
+.journal-table-wrap{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  overflow-x:auto;
+}
+.journal-table{width:100%; border-collapse:collapse; font-size:13.5px;}
+.journal-table th, .journal-table td{
+  padding:12px 14px; text-align:right; border-bottom:1px solid var(--border); white-space:nowrap;
+}
+.journal-table th{color:var(--text-muted); font-family:var(--font-mono); font-size:11.5px;}
+.journal-table .positive{color:var(--teal); font-weight:600;}
+.journal-table .negative{color:#E15757; font-weight:600;}
+.journal-delete{
+  background:none; border:1px solid var(--border); color:var(--text-muted);
+  border-radius:6px; padding:5px 10px; font-size:12px; cursor:pointer;
+}
+.journal-delete:hover{border-color:#E15757; color:#E15757;}
+.journal-empty{padding:24px; text-align:center; color:var(--text-muted); font-size:14px;}
+
+/* ============ Psychology page ============ */
+.psych-list{display:flex; flex-direction:column; gap:18px;}
+.psych-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:28px; position:relative;
+}
+.psych-num{
+  font-family:var(--font-mono); font-size:13px; color:var(--amber);
+  letter-spacing:2px; display:block; margin-bottom:10px;
+}
+.psych-card h2{font-size:19px; margin-bottom:12px;}
+.psych-card p{font-size:14.5px; color:var(--text-muted); margin-bottom:12px;}
+.psych-tip{
+  background:var(--surface-alt); border-right:2px solid var(--amber);
+  padding:12px 16px; border-radius:6px; font-size:14px; color:var(--text);
+  margin-bottom:0 !important;
+}
+.psych-tip strong{color:var(--amber);}
+
+/* ============ Trader cards ============ */
+.trader-list{display:flex; flex-direction:column; gap:18px;}
+.trader-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:26px;
+}
+.trader-card h3{font-size:18px; margin-bottom:6px;}
+.trader-era{font-family:var(--font-mono); font-size:12px; color:var(--amber); margin-bottom:12px;}
+.trader-card p{font-size:14.5px; color:var(--text-muted); margin-bottom:12px;}
+
+/* ============ Policy content ============ */
+.policy-content{max-width:720px;}
+.policy-content h2{font-size:18px; color:var(--amber); margin-top:32px; margin-bottom:12px;}
+.policy-content h2:first-child{margin-top:0;}
+.policy-content p{font-size:14.5px; color:var(--text-muted); line-height:1.9; margin-bottom:8px;}
+.policy-content a{color:var(--amber); text-decoration:underline;}
+
 /* ============ Responsive (base) ============ */
 @media (max-width: 900px){
   .main-nav{
@@ -416,4 +509,6 @@ img{max-width:100%;display:block;}
   .lecture-list{max-height:340px;}
   .meetup-card{flex-direction:column; align-items:flex-start; text-align:right;}
   .meetup-card .btn{width:100%; justify-content:center;}
+  .calc-box{grid-template-columns:1fr;}
+  .journal-form{grid-template-columns:1fr;}
 }

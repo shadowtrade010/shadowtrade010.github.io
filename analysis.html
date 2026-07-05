@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الأكاديمية — ShadowTrade Academy</title>
-<meta name="description" content="محاضرات ShadowTrade الأكاديمية كاملة داخل الموقع، مرتبة من التمهيدية للمحاضرة التاسعة.">
+<title>التحليلات — ShadowTrade Academy</title>
+<meta name="description" content="تحليلات دورية للذهب والعملات والعملات الرقمية من ShadowTrade Academy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,7 +13,6 @@
 </head>
 <body>
 
-<!-- ===== Header ===== -->
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="index.html" class="brand">
@@ -23,9 +22,9 @@
     <nav class="main-nav" id="mainNav">
       <a href="index.html">الرئيسية</a>
       <a href="getting-started.html">دليل البداية</a>
-      <a href="academy.html" class="active">الأكاديمية</a>
+      <a href="academy.html">الأكاديمية</a>
       <a href="articles.html">المقالات</a>
-      <a href="analysis.html">التحليلات</a>
+      <a href="analysis.html" class="active">التحليلات</a>
       <a href="psychology.html">علم النفس</a>
       <a href="tools.html">الأدوات</a>
       <a href="traders.html">كبار المتداولين</a>
@@ -37,66 +36,48 @@
   </div>
 </header>
 
-<!-- ===== Academy header ===== -->
 <section class="academy-head">
   <div class="wrap">
     <p class="eyebrow">SHADOWTRADE ACADEMY</p>
-    <h1>محاضرات الأكاديمية</h1>
-    <p class="hero-sub">شاهد المحاضرات بالترتيب من داخل الموقع مباشرة. باقي المحاضرات تُضاف تدريجيًا خلال الأسابيع القادمة.</p>
+    <h1>التحليلات</h1>
+    <p class="hero-sub">قراءات دورية للسوق حسب الفئة، بمنطق تحليلي واضح لا إشارات جاهزة بلا سياق.</p>
+  </div>
+</section>
 
-    <div class="progress-wrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <span class="progress-text" id="progressText">0 من 11 مكتملة</span>
+<section class="section">
+  <div class="wrap">
+    <div class="grid-cards">
+      <div class="card" style="cursor:default;">
+        <span class="card-icon">🥇</span>
+        <h3>الذهب (XAUUSD)</h3>
+        <p>تحليلات الذهب على الفريمات المختلفة.</p>
+        <span class="tool-status" style="position:static; display:inline-block; margin-top:10px;">أول تحليل قريبًا</span>
+      </div>
+      <div class="card" style="cursor:default;">
+        <span class="card-icon">💱</span>
+        <h3>العملات الرئيسية</h3>
+        <p>تحليلات أزواج مثل EURUSD وGBPUSD وغيرها.</p>
+        <span class="tool-status" style="position:static; display:inline-block; margin-top:10px;">أول تحليل قريبًا</span>
+      </div>
+      <div class="card" style="cursor:default;">
+        <span class="card-icon">₿</span>
+        <h3>العملات الرقمية</h3>
+        <p>تحليلات البيتكوين وأهم العملات الرقمية.</p>
+        <span class="tool-status" style="position:static; display:inline-block; margin-top:10px;">أول تحليل قريبًا</span>
+      </div>
     </div>
 
-    <div class="live-note">
-      <span class="live-dot"></span>
+    <div class="live-note" style="max-width:100%; margin-top:32px;">
+      <span class="live-dot" style="background:var(--amber); animation:none; box-shadow:none;"></span>
       <p>
-        الكورسات تُبث مباشرة (Live) على تطبيق <strong>Zoom</strong>، والمحاضرات هنا هي تسجيلات لهذه الجلسات.
-        لو عايز تحضر الجلسة اللايف الجاية، تواصل مع الدعم على
-        <a href="https://wa.me/201131097657" target="_blank" rel="noopener">واتساب</a>.
+        التحليلات هنا تُنشر بشكل دوري بمتابعة مباشرة من فريق ShadowTrade.
+        تابع <a href="https://t.me/+Hec2GglMw-1kN2Fk" target="_blank" rel="noopener">قناة تيليجرام</a>
+        لأول إشعار بأي تحليل جديد.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ===== Academy body ===== -->
-<section class="academy-body">
-  <div class="wrap academy-grid">
-
-    <!-- Player -->
-    <div class="player-col">
-      <div class="player-frame">
-        <iframe id="lecturePlayer"
-          src=""
-          title="مشغل محاضرات ShadowTrade"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="player-info">
-        <h2 id="currentTitle">المحاضرة التمهيدية</h2>
-        <button class="btn btn-ghost btn-small" id="markWatched">وضع علامة "تمت المشاهدة"</button>
-      </div>
-    </div>
-
-    <!-- Lecture list -->
-    <aside class="lecture-list" id="lectureList"></aside>
-
-  </div>
-</section>
-
-<!-- ===== Coming soon note ===== -->
-<section class="section section-alt">
-  <div class="wrap">
-    <p class="section-label">قريبًا</p>
-    <h2 class="section-title">محاضرات جديدة تُضاف خلال أسبوعين</h2>
-    <p class="hero-sub">هذه أول 9 محاضرات، وسيتم إضافة الباقي بشكل مستمر — سجل الرابط في المفضلة وتابع من هنا.</p>
-  </div>
-</section>
-
-<!-- ===== Footer ===== -->
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
@@ -122,6 +103,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="academy.js"></script>
 </body>
 </html>
